@@ -1,19 +1,11 @@
 package com.hackerrank.weather.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
-import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-@Entity
 public class Weather {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
     private Float lat;
@@ -21,8 +13,6 @@ public class Weather {
     private String city;
     private String state;
 
-    @ElementCollection
-    @CollectionTable(name = "weather_temperature")
     private List<Double> temperatures;
 
     public Weather(Integer id, Date date, Float lat, Float lon, String city, String state, List<Double> temperatures) {
