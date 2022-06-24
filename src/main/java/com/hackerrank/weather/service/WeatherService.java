@@ -15,9 +15,8 @@ public class WeatherService {
         this.weatherDao = weather;
     }
 
-    public Weather add(Weather weather){
+    public Weather add(Weather weather) {
         return weatherDao.createWeather(weather);
-
     }
 
     public List<Weather> getAllWeathers() {
@@ -26,5 +25,9 @@ public class WeatherService {
 
     public List<Weather> getWeatherBy(Date date) {
         return weatherDao.selectWeatherBy(date);
+    }
+
+    public List<Weather> getWeatherBy(String val) {
+        return weatherDao.selectWeatherBy(val);
     }
 }

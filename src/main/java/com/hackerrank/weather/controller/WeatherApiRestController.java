@@ -31,11 +31,19 @@ public class WeatherApiRestController {
     public ResponseEntity<List<Weather>> getAllWeather(
             @RequestParam(required = false)
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-                    Date date) {
-        if (date == null)
-            return ResponseEntity.ok(weatherService.getAllWeathers());
-        else
+                    Date date,
+            @RequestParam(required = false)
+                    String city,
+            @RequestParam(required = false)
+                    String sort
+    ) {
+        if (date != null)
             return ResponseEntity.ok(weatherService.getWeatherBy(date));
+
+        if (city != null)
+            return ResponseEntity.ok(weatherService.getWeatherBy(city));
+
+        return ResponseEntity.ok(weatherService.getAllWeathers());
 
     }
 

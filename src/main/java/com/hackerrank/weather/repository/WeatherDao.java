@@ -18,4 +18,6 @@ public interface WeatherDao {
     List<Weather>  selectWeatherBy(Date date);
 
     List<Weather> selectAllWeathers();
+
+    List<Weather> selectWeatherSortByDate();
 }

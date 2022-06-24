@@ -19,6 +19,8 @@ Example of a weather data JSON object:
    "temperature": [17.3, 16.8, 16.4, 16.0, 15.6, 15.3, 15.0, 14.9, 15.8, 18.0, 20.2, 22.3, 23.8, 24.9, 25.5, 25.7, 24.9, 23.0, 21.7, 20.8, 29.9, 29.2, 28.6, 28.1]
 }
 ```
+![Requirements](img/Spring%20Boot%20Weather%20API.png)
+
 
 ## Requirements:
 The `REST` service must expose `/weather` endpoint that allows managing the weather records in the following way:
@@ -44,7 +46,29 @@ The `REST` service must expose `/weather` endpoint that allows managing the weat
 * if the matching record exists, the response code is 200 and the response body is the matching object
 * if there is no record with the given id in the database, the response code is 404
 
-Your task is to complete the given project so that it passes all the test cases when running the provided unit tests. The project by default supports the use of the H2 database. Implement the POST request to /weather first because testing the other methods requires POST to work correctly.
+Your task is to complete the given project so that it passes all the test cases when running the provided unit tests. 
+The project by default supports the use of the H2 database. Implement the POST request to /weather first because testing the other methods requires POST to work correctly.
+
+## Examples
+
+## Post Example
+![Post Example](img/POST%20request%20to%20weather.png)
+
+## Get Example with Query by id
+![Get With Date Query](img/Get%20Assuming%20that%20the%20object%20with%20id%201%20exists,%20then.png)
+
+## Get Example
+![Get Example](img/Get%20response%20code%20is%20200,%20and%20when%20converted.png)
+
+## Get Example with Query by Date
+![Get With Date Query](img/Get%20With%20Date.png)
+
+## Get Example with Query by City
+![Get With Date Query](img/Get%20query%20by%20city.png)
+
+## Get Example with Query by City and Date
+![Get With Date Query](img/Get%20Query%20by%20City%20and%20Date.png)
+
 
 ## Commands
 - run: 
